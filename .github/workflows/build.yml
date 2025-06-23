@@ -56,9 +56,9 @@ jobs:
             /d:sonar.host.url="https://sonarcloud.io" `
             /d:sonar.exclusions="**/bin/**,**/obj/**,**/Migrations/**,**/*.Designer.cs,**/*.g.cs"
 
-          dotnet restore "Blackbox Scenario 2/Blackbox Scenario 2.sln"
-          dotnet build "Blackbox Scenario 2/Blackbox Scenario 2.sln" --no-incremental
-          dotnet test "Blackbox Scenario 2/Blackbox Scenario 2.sln" --no-build --verbosity normal
+          dotnet restore "Blackbox_Scenario02/Blackbox_Scenario02.sln"
+          dotnet build "Blackbox_Scenario02/Blackbox_Scenario02.sln" --no-incremental
+          dotnet test "Blackbox_Scenario02/Blackbox_Scenario02.sln" --no-build --verbosity normal
 
           .\.sonar\scanner\dotnet-sonarscanner end `
             /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
