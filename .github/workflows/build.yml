@@ -58,7 +58,7 @@ jobs:
 
           dotnet restore "Blackbox Scenario 2/Blackbox Scenario 2.sln"
           dotnet build "Blackbox Scenario 2/Blackbox Scenario 2.sln" --no-incremental
-          dotnet test Blackbox Scenario 2/Blackbox Scenario 1.sln" --no-build --verbosity normal
+          dotnet test Blackbox Scenario 2/Blackbox Scenario 2.sln" --no-build --verbosity normal
 
           .\.sonar\scanner\dotnet-sonarscanner end `
             /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
